@@ -32,6 +32,7 @@ clean:
 
 fclean: clean
 	@echo "[Cleaning] $(NAME)"
+	@$(RM) $(NAME)
 
 re: fclean all
 
