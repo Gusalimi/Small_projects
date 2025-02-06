@@ -24,6 +24,6 @@ char  *add_char(char *old_string, char c);
 // encode.c
 char  *encode(char *message);
 // decode.c
-char  *decode();
+void  decode_interactive(void);
 
 #endif

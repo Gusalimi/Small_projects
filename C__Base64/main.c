@@ -1,16 +1,17 @@
 #include "base64.h"
 
 int main(int ac, char **av) {
-  bool  decode_mode;
-  char  *message;
-  char  *transformed;
+	char	*message;
+	char	*encoded;
 
-  decode_mode = should_decode(ac, av);
-  if (decode_mode) {
-    transformed = decode();
-  } else {
-    message = get_full_message();
-    transformed = encode(message);
-  }
-  printf("%s\n", transformed);
+	if (should_decode(ac, av)) {
+		decode_interactive();
+	} else {
+		message = get_full_message();
+		encoded = encode(message);
+		printf("%s\n", encoded);
+		free(message);
+		free(encoded);
+	}
+	return (0);
 }
