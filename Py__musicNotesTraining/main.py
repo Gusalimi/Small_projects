@@ -27,8 +27,8 @@ def guess(given, to_guess, note) -> None:
 
 
 def main() -> None:
-    notes_en = ["c", "d", "e", "f", "g", "a", "b"]
-    notes_fr = ["do", "re", "mi", "fa", "sol", "la", "si"]
+    notes_en = ["C", "D", "E", "F", "G", "A", "B"]
+    notes_fr = ["Do", "Ré", "Mi", "Fa", "Sol", "La", "Si"]
 
     os.system("clear")
     while True:
@@ -41,6 +41,8 @@ def main() -> None:
         else:
             given = notes_fr
             to_guess = notes_en
+
+        to_guess = [note.lower() for note in to_guess]
 
         guess(given, to_guess, note)
 
